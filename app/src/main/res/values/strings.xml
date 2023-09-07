@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Fitness Tracker</string>
     <string name="imc">IMC</string>
+    <string name="imc_desc">IMC its for \"indice de massa corporal\" and it an equation mathematical of fiew operations</string>
+    <string name="weight_edit">Peso (Kg)</string>
+    <string name="length_edit">Altura (cm)</string>
+    <string name="btn_calcular">Calcular</string>
 </resources>
