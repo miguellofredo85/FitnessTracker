@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Fitness Tracker</string>
+    <string name="imc">IMC</string>
+</resources>
