@@ -24,7 +24,7 @@
         style="@style/EditTextForm"/>
 
     <EditText
-        android:id="@+id/edit_length"
+        android:id="@+id/edit_height"
         android:hint="@string/length_edit"
         style="@style/EditTextForm"/>
 
