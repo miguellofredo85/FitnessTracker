@@ -2,6 +2,7 @@
 
     import androidx.appcompat.app.AppCompatActivity
     import android.os.Bundle
+    import android.util.Log
     import android.widget.Button
     import android.widget.EditText
     import android.widget.Toast
@@ -23,10 +24,15 @@
                     Toast.makeText(this, "Input cant be zero or empty", Toast.LENGTH_LONG).show()
                     return@setOnClickListener // kill event fun
                 }
-
+                val weight = editWeight.text.toString().toInt()
+                val height = editHeight.text.toString().toInt()
+                val res = calcImc(weight, height)
+                Log.d("Teste", "resultado: $res") // log debug
             }
         }
-
+        private fun calcImc(weight: Int, height: Int):Double{
+            return weight/((height/100.0)*(height/100.0))
+        }
         private fun validateForm(): Boolean {
             //not null
             // not zero
