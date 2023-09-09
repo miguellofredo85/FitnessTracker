@@ -1,12 +1,16 @@
     package co.tiagoaguiar.fitnesstracker
 
+    import android.content.DialogInterface
     import androidx.appcompat.app.AppCompatActivity
     import android.os.Bundle
     import android.util.Log
+    import android.view.View
+    import android.view.View.OnClickListener
     import android.widget.Button
     import android.widget.EditText
     import android.widget.Toast
     import androidx.annotation.StringRes
+    import androidx.appcompat.app.AlertDialog
 
     class ImcActivity : AppCompatActivity() {
         private lateinit var editHeight: EditText
@@ -30,8 +34,18 @@
                 val res = calcImc(weight, height)
                 Log.d("Teste", "resultado: $res") // log debug
 
-                val imcResponseMessage = imcResponse(res)
-                Toast.makeText(this, imcResponseMessage, Toast.LENGTH_LONG).show()
+                val imcResponseId = imcResponse(res)
+                val dialog = AlertDialog.Builder(this)
+
+                val title = getString(R.string.imc_response, res)
+
+                dialog.setTitle(title)
+                dialog.setMessage(imcResponseId)
+
+                dialog.setPositiveButton(android.R.string.ok
+                ) { dialog, which -> }
+                dialog.create()
+                dialog.show()
             }
         }
         private fun imcResponse(imc:Double):String{

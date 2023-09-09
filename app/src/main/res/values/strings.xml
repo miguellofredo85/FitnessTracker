@@ -5,4 +5,5 @@
     <string name="weight_edit">Peso (Kg)</string>
     <string name="length_edit">Altura (cm)</string>
     <string name="btn_calcular">Calcular</string>
+    <string name="imc_response">Seu IMC e: %1$.2f</string>
 </resources>
