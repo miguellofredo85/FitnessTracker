@@ -35,17 +35,12 @@
                 Log.d("Teste", "resultado: $res") // log debug
 
                 val imcResponseId = imcResponse(res)
-                val dialog = AlertDialog.Builder(this)
-
-                val title = getString(R.string.imc_response, res)
-
-                dialog.setTitle(title)
-                dialog.setMessage(imcResponseId)
-
-                dialog.setPositiveButton(android.R.string.ok
-                ) { dialog, which -> }
-                dialog.create()
-                dialog.show()
+                    AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.imc_response, res))
+                    .setMessage(imcResponseId)
+                    .setPositiveButton(android.R.string.ok) { dialog, which -> }
+                    .create()
+                    .show()
             }
         }
         private fun imcResponse(imc:Double):String{
