@@ -5,31 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/btn_imc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
-        android:background="@color/light_grey"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btn_imc"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="332dp"-->
+<!--        android:background="@color/light_grey"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_wb_sunny_24"
-            tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="0dp" />
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/baseline_wb_sunny_24"-->
+<!--            tools:layout_editor_absoluteX="-2dp"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imc"
-            tools:layout_editor_absoluteX="-3dp"
-            tools:layout_editor_absoluteY="24dp" />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/imc"-->
+<!--            tools:layout_editor_absoluteX="-3dp"-->
+<!--            tools:layout_editor_absoluteY="24dp" />-->
+<!--    </LinearLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
