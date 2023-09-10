@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
             ))
         mainItems.add(
             MainItem(
-                id =   1,
+                id =   2,
                 drawable = R.drawable.baseline_wb_sunny_24,
-                textId = R.string.imc,
+                textId = R.string.tmb,
                 color = R.color.green
             ))
 

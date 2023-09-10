@@ -6,4 +6,5 @@
     <string name="length_edit">Altura (cm)</string>
     <string name="btn_calcular">Calcular</string>
     <string name="imc_response">Seu IMC e: %1$.2f</string>
+    <string name="tmb">TMB\n</string>
 </resources>
