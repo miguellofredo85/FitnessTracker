@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -29,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         mainItems.add(
             MainItem(
                 id =   2,
-                drawable = R.drawable.baseline_wb_sunny_24,
+                drawable = R.drawable.baseline_water_24,
                 textId = R.string.tmb,
-                color = R.color.green
+                color = R.color.teal_200
             ))
 
         //1- o layout XML
@@ -40,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = MainAdapter(mainItems)
         rv = findViewById(R.id.rv_main)
         rv.adapter = adapter
-        rv.layoutManager = LinearLayoutManager(this)
+        rv.layoutManager = GridLayoutManager(this, 2)
 
 
         //class para admin rv e suas celulas (layout item)
@@ -76,8 +79,13 @@ class MainActivity : AppCompatActivity() {
     // a clase da celula em si!!
     private class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(item:MainItem){
-            val btnTeste = itemView.findViewById<Button>(R.id.btn_inicial)
-            btnTeste.setText(item.textId)
+            val img:ImageView = itemView.findViewById(R.id.item_img)
+            val name: TextView = itemView.findViewById(R.id.item_txt_name)
+            val container:LinearLayout = itemView.findViewById(R.id.item_container_imc)
+
+            img.setImageResource(item.id) // o Id de cada MainItem
+            name.setText(item.textId)
+            container.setBackgroundColor(item.color)
 }
     }
 }
