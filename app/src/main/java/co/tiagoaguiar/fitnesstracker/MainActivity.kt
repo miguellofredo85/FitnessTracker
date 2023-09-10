@@ -25,8 +25,14 @@ class MainActivity : AppCompatActivity() {
                 drawable = R.drawable.baseline_wb_sunny_24,
                 textId = R.string.imc,
                 color = R.color.green
-            )
-        )
+            ))
+        mainItems.add(
+            MainItem(
+                id =   1,
+                drawable = R.drawable.baseline_wb_sunny_24,
+                textId = R.string.imc,
+                color = R.color.green
+            ))
 
         //1- o layout XML
         //2- a onde a rv vai aparecer (tela principal cheia)
