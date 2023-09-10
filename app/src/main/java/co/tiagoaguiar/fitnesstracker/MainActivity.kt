@@ -37,16 +37,16 @@ class MainActivity : AppCompatActivity() {
             val view = layoutInflater.inflate(R.layout.main_item, parent, false)
             return MainViewHolder(view)
         }
-//cantidade de celulas
+        //cantidade de celulas
         override fun getItemCount(): Int {
             return 15
         }
-        // e disparado toda vez que houver uma rolagem na
         // tela e seja ncesariao troca a celula
-
         override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
             TODO("Not yet implemented")
         }
+        // e disparado toda vez que houver uma rolagem na
+
 
     }
 
