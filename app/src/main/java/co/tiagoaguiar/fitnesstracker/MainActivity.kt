@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity(), OnItemClickListener{
+class MainActivity : AppCompatActivity(){
 //   private lateinit var btnImc:LinearLayout
     private lateinit var rv : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +42,19 @@ class MainActivity : AppCompatActivity(), OnItemClickListener{
         //1- o layout XML
         //2- a onde a rv vai aparecer (tela principal cheia)
         //3- locia de conetar o xml da celula dentro do rv + quantidade de elementos
-        val adapter = MainAdapter(mainItems, this)
+        val adapter = MainAdapter(mainItems, object : OnItemClickListener{
+            // mteodo via objeto anonio,
+            override fun onClick(id: Int) {
+                when(id){
+                    1->{
+                        val intent = Intent(this@MainActivity, ImcActivity::class.java)
+                        startActivity(intent)
+                    }
+                    2->{
+                    }
+                }
+            }
+        })
         rv = findViewById(R.id.rv_main)
         rv.adapter = adapter
         rv.layoutManager = GridLayoutManager(this, 2)
@@ -57,18 +69,16 @@ class MainActivity : AppCompatActivity(), OnItemClickListener{
 //        }
     }
 
-    override fun onClick(id: Int) {
-        when(id){
-            1->{
-                val intent = Intent(this, ImcActivity::class.java)
-                startActivity(intent)
-            }
-            2->{
-                val intent = Intent(this, ImcActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
+//    override fun onClick(id: Int) {
+//        when(id){
+//            1->{
+//                val intent = Intent(this, ImcActivity::class.java)
+//                startActivity(intent)
+//            }
+//            2->{
+//            }
+//        }
+//    }
     // e a classe quye administra o layout
     private inner class MainAdapter(
         private val mainItems: List<MainItem>,
@@ -103,7 +113,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener{
             container.setBackgroundColor(item.color)
 
             container.setOnClickListener {
-                onItemClickListener.onClick(it.id)
+                onItemClickListener.onClick(item.id)
             }
         }
     }
