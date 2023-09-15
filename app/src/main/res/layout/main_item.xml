@@ -6,16 +6,21 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:gravity="center"
         android:id="@+id/item_container_imc"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/light_grey"
+        android:background="@color/colorLightGray"
         android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintDimensionRatio="1:1"        app:layout_constraintTop_toTopOf="parent">
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp">
 
         <ImageView
-            android:id="@+id/item_img"
+            android:id="@+id/item_img_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_wb_sunny_24" />
@@ -24,6 +29,8 @@
             android:id="@+id/item_txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/imc" />
+            android:text="@string/label_imc" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

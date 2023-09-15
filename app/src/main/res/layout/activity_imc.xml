@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schema  s.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ImcActivity"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center">
 
-    <TextView
-        android:text="@string/imc_desc"
-        style="@style/TextViewForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/edit_weight"
-        android:hint="@string/weight_edit"
-        style="@style/EditTextForm"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:context=".ImcActivity">
 
-    <EditText
-        android:id="@+id/edit_height"
-        android:hint="@string/length_edit"
-        style="@style/EditTextForm"/>
+        <TextView
+            style="@style/TextViewForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imc_desc" />
 
-    <Button
-        android:id="@+id/btn_calcular"
-       style="@style/BottomForm"/>
+        <EditText
+            style="@style/EditTextForm"
+            android:id="@+id/edit_imc_weight"
+            android:hint="@string/weight" />
 
-</LinearLayout>
+        <EditText
+            style="@style/EditTextForm"
+            android:id="@+id/edit_imc_height"
+            android:hint="@string/height" />
+
+        <Button
+            style="@style/ButtonForm"
+            android:id="@+id/btn_imc_send"
+            android:text="@string/calc" />
+
+    </LinearLayout>
+
 </ScrollView>
