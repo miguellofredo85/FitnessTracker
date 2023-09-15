@@ -143,8 +143,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 3 maneiras de escutar eventos de click usando celular (viewholder) activities
-    // !             1. [X] impl interface (nesse video)
-    // !!            2. objetos anonimos (prox.)
-    // !!! -> kotlin 3. funcional (prox.)
+    // !             1. [X] impl interface 
+    // !!            2. objetos anonimos 
+    // !!! -> kotlin 3. funcional         
 
 }
